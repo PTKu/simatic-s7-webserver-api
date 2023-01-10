@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021, Siemens AG
+﻿// Copyright (c) 2023, Siemens AG
 //
 // SPDX-License-Identifier: MIT
 using System;
@@ -37,5 +37,13 @@ namespace Siemens.Simatic.S7.Webserver.API.Models
         /// <returns></returns>
         public override int GetHashCode() => (Name).GetHashCode();
 
+        /// <summary>
+        /// Return the Name
+        /// </summary>
+        /// <returns>Name</returns>
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021, Siemens AG
+﻿// Copyright (c) 2023, Siemens AG
 //
 // SPDX-License-Identifier: MIT
 using System;
@@ -92,6 +92,18 @@ namespace Siemens.Simatic.S7.Webserver.API.Enums
         /// </summary>
         UnsupportedAddress = 204,
         /// <summary>
+        /// The entity does not exist (e.g. Files Browse)
+        /// </summary>
+        EntityDoesNotExist = 302,
+        /// <summary>
+        /// The entity is already in use (e.g. Files.DeleteDirectory) 
+        /// </summary>
+        EntityInUse = 303,
+        /// <summary>
+        /// The entity already exists (e.g. Files CreateDirectory)
+        /// </summary>
+        EntityAlreadyExists = 304,
+        /// <summary>
         /// The given Ticket-ID is not found in the user(-token)s list of tickets
         /// </summary>
         NotFound = 400,
@@ -163,6 +175,10 @@ namespace Siemens.Simatic.S7.Webserver.API.Enums
         /// The content of the resource requested has been corrupted. Reupload the resource before calling this method again.
         /// </summary>
         ResourceContentHasBeenCorrupted = 514,
+        /// <summary>
+        /// The PLC is not in operating mode stop. The method cannot be executed while the plc is not in stop mode.
+        /// </summary>
+        PLCNotInStop = 1004,
         /// <summary>
         /// The method has not been found by the plc - check the spelling and fw-version (and according methods) of plc
         /// </summary>
